@@ -29,5 +29,10 @@ When all is good, just run the following (adapt as needed for directories depend
 
 `/django/venv/bin/python3 /projects/simple-django-file-server/manage.py runserver 0.0.0.0:443`
 
+Now change the admin password:
+
+`cd django-fileserver-simple/`
+`manage.py changepassword admin`
+
 # Credits:
 Used some ideas from https://github.com/kindkaktus/django-file-server, except that one is 2 years old and uses an outdated Django version.
