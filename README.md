@@ -22,5 +22,9 @@ Now to clone this repo..
 
 Change the allowed hosts to your own server's ip in the DMZ/DMZ/settings.py file.
 
+# Running
+When all is good, just run the following (adapt as needed for directories depending on where your venv is, unless you're already in venv)
+`/django/venv/bin/python3 /django/DMZ/manage.py runserver 0.0.0.0:443`
+
 # Credits:
 Used some ideas from https://github.com/kindkaktus/django-file-server, except that one is 2 years old and uses an outdated Django version.
