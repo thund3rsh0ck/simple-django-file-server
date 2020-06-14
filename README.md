@@ -24,6 +24,7 @@ Change the allowed hosts to your own server's ip in the DMZ/DMZ/settings.py file
 
 # Running
 When all is good, just run the following (adapt as needed for directories depending on where your venv is, unless you're already in venv)
+
 `/django/venv/bin/python3 /projects/simple-django-file-server/manage.py runserver 0.0.0.0:443`
 
 # Credits:
