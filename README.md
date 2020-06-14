@@ -1,5 +1,6 @@
 # Django-fileserver-simple
 REALLY simple fileserver to serve files via HTTPS
+Admins will have ability to upload files. Standard users will only be able to download.
 
 # Installing
 So first off is to kick off your venv, we are using centos so go to the directory you want to install this in: 
