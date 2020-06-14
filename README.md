@@ -1,8 +1,6 @@
 # django-fileserver-simple
 REALLY simple fileserver to serve files via HTTPS
 
-This project is based kind of off https://github.com/kindkaktus/django-file-server, except that one is 2 years old and uses an outdated Django version.
-
 So first off is to kick off your venv, we are using centos so go to the directory you want to install this in: 
 
 `yum install python3 git`
@@ -22,3 +20,6 @@ Now to clone this repo..
 `git clone https://github.com/thund3rsh0ck/django-fileserver-simple/`
 
 Change the allowed hosts to your own server's ip in the DMZ/DMZ/settings.py file.
+
+# Credits:
+Used some ideas from https://github.com/kindkaktus/django-file-server, except that one is 2 years old and uses an outdated Django version.
