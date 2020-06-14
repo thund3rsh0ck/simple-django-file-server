@@ -21,4 +21,4 @@ Now to clone this repo..
 
 `git clone https://github.com/thund3rsh0ck/django-fileserver-simple/`
 
-
+Change the allowed hosts to your own server's ip in the DMZ/DMZ/settings.py file.
