@@ -18,6 +18,10 @@ This is the version of Django we coded this on, but you should try to install th
 
 `pip install Django==3.0.7`
 
+We also installed Django axes to avoid brute force of logins.
+
+`pip install django-axes==5.3.4`
+
 Now to clone this repo..
 
 `git clone https://github.com/thund3rsh0ck/django-fileserver-simple/`
@@ -28,6 +32,12 @@ Change the allowed hosts to your own server's ip in the DMZ/DMZ/settings.py file
 When all is good, just run the following (adapt as needed for directories depending on where your venv is, unless you're already in venv)
 
 `/django/venv/bin/python3 /projects/simple-django-file-server/manage.py runserver 0.0.0.0:443`
+
+Now change the admin password:
+
+`cd django-fileserver-simple/`
+
+`manage.py changepassword admin`
 
 # Credits:
 Used some ideas from https://github.com/kindkaktus/django-file-server, except that one is 2 years old and uses an outdated Django version.
