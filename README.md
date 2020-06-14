@@ -1,6 +1,7 @@
-# django-fileserver-simple
+# Django-fileserver-simple
 REALLY simple fileserver to serve files via HTTPS
 
+# Installing
 So first off is to kick off your venv, we are using centos so go to the directory you want to install this in: 
 
 `yum install python3 git`
