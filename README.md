@@ -18,6 +18,9 @@ This is the version of Django we coded this on, but you should try to install th
 
 `pip install Django==3.0.7`
 
+We also installed Django axes to avoid brute force of logins.
+`pip install django-axes==5.3.4`
+
 Now to clone this repo..
 
 `git clone https://github.com/thund3rsh0ck/django-fileserver-simple/`
