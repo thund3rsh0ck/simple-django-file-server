@@ -1,3 +1,4 @@
 from django.db import models
 
-# Create your models here.
+class PrivateFileUpload(models.Model):
+	privatefileuploaded = models.FileField(upload_to='privatefiles/%Y/%m/%d')
