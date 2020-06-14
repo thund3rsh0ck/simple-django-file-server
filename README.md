@@ -32,6 +32,7 @@ When all is good, just run the following (adapt as needed for directories depend
 Now change the admin password:
 
 `cd django-fileserver-simple/`
+
 `manage.py changepassword admin`
 
 # Credits:
