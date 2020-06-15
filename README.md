@@ -114,6 +114,21 @@ Next we install python certbot for nginx
 Make sure you can serve on port 40 and 443 on your server, then run:
 `certbox --nginx`
 
+Now, certbox has made some changes to the /etc/nginx/nginx.conf file.. let's make some changes accordingly as well.
+
+You need to comment out the ``root /usr/share/nginx/html;`` line by adding a # infront of it.
+
+Let's delete the file we placed earlier since the certbot is now managing our server:
+
+`rm /etc/nginx/sites-enabled/DMZ_nginx.conf`
+
+Let's copy the two new files into the correct directories to route nginx to uWSGI correctly:
+
+`cp upstream_django.conf /etc/nginx/conf.d/`
+
+`cp DMZ_PROD.conf /etc/nginx/default.d/`
+
+
 # Credits:
 
 Used some ideas from https://github.com/kindkaktus/django-file-server, except that one is 2 years old and uses an outdated Django version.
