@@ -138,3 +138,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'fileserved/privatefilelist/')
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/'
+
+AXES_COOLOFF_TIME = 24
+
+AXES_LOCK_OUT_BY_COMBINATION_USER_AND_IP = True
+
