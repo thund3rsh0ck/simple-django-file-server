@@ -1,6 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import PrivateFileUpload
+from django.contrib.auth.decorators import login_required
 
-#What our fileserver will render.. for now let's just have some http
 def index(request):
-    return HttpResponse("Welcome to our simple fileserver")
+    return render(request, 'fileserver/index.html')
+
+@login_required
+def privatefilelist(request):
+    private_file_list = PrivateFileUpload.objects.all()
+    context = {'private_file_list': private_file_list}
+    return render(request, 'fileserver/privatefilelist.html', context)
