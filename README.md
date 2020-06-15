@@ -39,6 +39,11 @@ Now change the admin password:
 
 `manage.py changepassword admin`
 
+While you're at it change the secret key in DMZ/settings.py by running the following within your venv:
+
+`python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'`
+
+
 # Installing - (Production Server)
 
 We'll need to run uWSGI to serve as a gateway between nginx and django.
@@ -76,12 +81,17 @@ Now to test if uWSGI will run with nginx together:
 `uwsgi --socket DMZ.sock --module DMZ.wsgi --chmod-socket=666`
 
 Need to now install uwsgi globally, so deactivate and install:
+
 `deactivate`
+
 `pip install uwsgi`
 
 Now you should be able to run uWSGI directly with the following command, given you've edited the directories in DMZ_uwsgi.ini:
+
 `uwsgi --ini DMZ_uwsgi.ini`
 
 # Credits:
+
 Used some ideas from https://github.com/kindkaktus/django-file-server, except that one is 2 years old and uses an outdated Django version.
+
 Also this guide helped a ton in troubleshooting nginx and uWSGI: https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html
