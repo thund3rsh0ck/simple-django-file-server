@@ -43,7 +43,7 @@ Now change the admin password:
 
 `yum install python 3.6-devel`
 
-`pip install uswgi`
+`pip install uwsgi`
 
 # Credits:
 Used some ideas from https://github.com/kindkaktus/django-file-server, except that one is 2 years old and uses an outdated Django version.
