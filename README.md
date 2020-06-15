@@ -41,9 +41,25 @@ Now change the admin password:
 
 # Installing - (Production Server)
 
+We'll need to run uWSGI to serve as a gateway between nginx and django.
+
 `yum install python 3.6-devel`
 
 `pip install uwsgi`
+
+Change `"DEBUG=TRUE"` to `"DEBUG=FALSE"` in the DMZ/settings.py file.
+
+Test the uWSGI server using the following command in the /simple-django-file-server folder:
+
+`uwsgi --http :443 --module DMZ.wsgi`
+
+If there's an error.. maybe you're in the wrong directory? I dunno..
+
+If all goes well.. now it's time to install nginx!
+
+`yum install nginx`
+
+
 
 # Credits:
 Used some ideas from https://github.com/kindkaktus/django-file-server, except that one is 2 years old and uses an outdated Django version.
