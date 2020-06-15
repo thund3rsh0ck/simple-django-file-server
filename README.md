@@ -122,7 +122,7 @@ Let's delete the file we placed earlier since the certbot is now managing our se
 
 `rm /etc/nginx/sites-enabled/DMZ_nginx.conf`
 
-Let's copy the two new files into the correct directories to route nginx to uWSGI correctly:
+Let's copy the two new files into the correct directories to route nginx to uWSGI correctly (Make sure you change the directories to reflect your own):
 
 `cp upstream_django.conf /etc/nginx/conf.d/`
 
