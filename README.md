@@ -128,6 +128,13 @@ Let's copy the two new files into the correct directories to route nginx to uWSG
 
 `cp DMZ_PROD.conf /etc/nginx/default.d/`
 
+Now restart nginx and uwsgi and you should be good to go:
+
+`nginx pkill`
+
+`nginx`
+
+`uwsgi --ini DMZ_uwsgi.ini`
 
 # Credits:
 
