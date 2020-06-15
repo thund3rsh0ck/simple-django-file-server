@@ -99,6 +99,21 @@ Make sure nginx is running as well
 
 `nginx`
 
+All should be good right now.. you can script it into somnething to kick them off on boot.
+
+To get an HTTPs cert, we will be following this guide for Centos 8: https://certbot.eff.org/lets-encrypt/centosrhel8-nginx
+
+First we enable EPEL:
+
+`yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm`
+
+Next we install python certbot for nginx
+
+`dnf install certbot python3-certbot-nginx`
+
+Make sure you can serve on port 40 and 443 on your server, then run:
+`certbox --nginx`
+
 # Credits:
 
 Used some ideas from https://github.com/kindkaktus/django-file-server, except that one is 2 years old and uses an outdated Django version.
