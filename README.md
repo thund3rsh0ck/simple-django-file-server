@@ -59,6 +59,13 @@ If all goes well.. now it's time to install nginx!
 
 `yum install nginx`
 
+To test if this is working, just type 
+`nginx`
+
+You should see something running on port 80, if so, you can kill that process with 
+`pkill nginx`
+
+
 
 
 # Credits:
