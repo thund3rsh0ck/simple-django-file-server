@@ -99,7 +99,7 @@ Make sure nginx is running as well
 
 `nginx`
 
-All should be good right now.. you can script it into somnething to kick them off on boot.
+All should be good right now.. you can script it into something like cron to kick them off on boot.
 
 To get an HTTPs cert, we will be following this guide for Centos 8: https://certbot.eff.org/lets-encrypt/centosrhel8-nginx
 
