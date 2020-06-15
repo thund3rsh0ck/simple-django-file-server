@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div style="float:left;width:80%">
+<h1>Private Files</h1>
+<h2>To add more files, login as an admin <a href="/admin">here</a>.</h2>
+{% if private_file_list %}
+    <ul>
+    {% for privatefile in private_file_list %}
+        <li><a href="{{ privatefile }}">{{privatefile}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No files are available.</p>
+{% endif %}
+</div>
+<div style="float:left;width:20%;">
+<ul>
+   {% if user.is_authenticated %}
+     <li>User: {{ user.get_username }}</li>
+     <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>   
+   {% else %}
+     <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>   
+   {% endif %} 
+</ul>
+</div>
+</body>
+</html>
