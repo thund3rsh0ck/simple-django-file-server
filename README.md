@@ -41,6 +41,8 @@ Now change the admin password:
 
 # Installing - (Production Server)
 
+`yum install python 3.6-devel`
+
 `pip install uswgi`
 
 # Credits:
