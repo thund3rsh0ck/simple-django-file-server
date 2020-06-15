@@ -4,6 +4,8 @@ REALLY simple fileserver to serve files via HTTPS
 Admins will have ability to upload files. Standard users will only be able to download.
 
 # Installing - (Development Server)
+This is where you just want a quick and dirty file server for hosting things in development (you may want to just use `python3 -m http.server [port]` but if you want a login page I guess this one will work :D. It's quick cause all you need is Django.
+
 So first off is to kick off your venv, we are using centos so go to the directory you want to install this in: 
 
 `yum install python3 git`
@@ -45,8 +47,7 @@ While you're at it change the secret key in DMZ/settings.py by running the follo
 
 
 # Installing - (Production Server)
-
-We'll need to run uWSGI to serve as a gateway between nginx and django.
+This is more of a full fledged server.. with really basic scripts still aha. We'll need to run uWSGI to serve as a gateway between nginx and django to make this server more stable and "production" friendly. We're doing this in docker so some of the binaries will be in weird places, you may be using init.d instead.
 
 `yum install python 3.6-devel`
 
