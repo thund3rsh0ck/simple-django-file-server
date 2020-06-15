@@ -99,7 +99,7 @@ Make sure nginx is running as well
 
 `nginx`
 
-All should be good right now.. you can script it into somnething to kick them off on boot.
+All should be good right now.. you can script it into something like cron to kick them off on boot.
 
 To get an HTTPs cert, we will be following this guide for Centos 8: https://certbot.eff.org/lets-encrypt/centosrhel8-nginx
 
@@ -113,6 +113,28 @@ Next we install python certbot for nginx
 
 Make sure you can serve on port 40 and 443 on your server, then run:
 `certbox --nginx`
+
+Now, certbox has made some changes to the /etc/nginx/nginx.conf file.. let's make some changes accordingly as well.
+
+You need to comment out the ``root /usr/share/nginx/html;`` line by adding a # infront of it.
+
+Let's delete the file we placed earlier since the certbot is now managing our server:
+
+`rm /etc/nginx/sites-enabled/DMZ_nginx.conf`
+
+Let's copy the two new files into the correct directories to route nginx to uWSGI correctly (Make sure you change the directories to reflect your own):
+
+`cp upstream_django.conf /etc/nginx/conf.d/`
+
+`cp DMZ_PROD.conf /etc/nginx/default.d/`
+
+Now restart nginx and uwsgi and you should be good to go:
+
+`nginx pkill`
+
+`nginx`
+
+`uwsgi --ini DMZ_uwsgi.ini`
 
 # Credits:
 
