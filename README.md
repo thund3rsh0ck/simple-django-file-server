@@ -41,9 +41,47 @@ Now change the admin password:
 
 # Installing - (Production Server)
 
+We'll need to run uWSGI to serve as a gateway between nginx and django.
+
 `yum install python 3.6-devel`
 
 `pip install uwsgi`
 
+Change `"DEBUG=TRUE"` to `"DEBUG=FALSE"` in the DMZ/settings.py file.
+
+Test the uWSGI server using the following command in the /simple-django-file-server folder:
+
+`uwsgi --http :443 --module DMZ.wsgi`
+
+If there's an error.. maybe you're in the wrong directory? I dunno..
+
+If all goes well.. now it's time to install nginx!
+
+`yum install nginx`
+
+To test if this is working, just type 
+`nginx`
+
+You should see something running on port 80, if so, you can kill that process with 
+`pkill nginx`
+
+Now, edit DMZ_nginx.conf to correspond with your server.. so the directories may need to change.
+
+Next, I copied the DMZ_nginx.conf to /etc/nginx/sites-enabled/, but you can make a symlink as well.
+
+I then edited the following file /etc/nginx/nginx.conf and added the following line inside the http bracket:
+`include /etc/nginx/sites-enabled/*;`
+
+Now to test if uWSGI will run with nginx together:
+`uwsgi --socket DMZ.sock --module DMZ.wsgi --chmod-socket=666`
+
+Need to now install uwsgi globally, so deactivate and install:
+`deactivate`
+`pip install uwsgi`
+
+Now you should be able to run uWSGI directly with the following command, given you've edited the directories in DMZ_uwsgi.ini:
+`uwsgi --ini DMZ_uwsgi.ini`
+
 # Credits:
 Used some ideas from https://github.com/kindkaktus/django-file-server, except that one is 2 years old and uses an outdated Django version.
+Also this guide helped a ton in troubleshooting nginx and uWSGI: https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html
