@@ -79,5 +79,9 @@ Need to now install uwsgi globally, so deactivate and install:
 `deactivate`
 `pip install uwsgi`
 
+Now you should be able to run uWSGI directly with the following command, given you've edited the directories in DMZ_uwsgi.ini:
+`uwsgi --ini DMZ_uwsgi.ini`
+
 # Credits:
 Used some ideas from https://github.com/kindkaktus/django-file-server, except that one is 2 years old and uses an outdated Django version.
+Also this guide helped a ton in troubleshooting nginx and uWSGI: https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html
