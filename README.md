@@ -4,7 +4,7 @@ REALLY simple fileserver to serve files via HTTPS
 Admins will have ability to upload files. Standard users will only be able to download.
 
 # Installing - (Development Server)
-This is where you just want a quick and dirty file server for hosting things in development (you may want to just use `python3 -m http.server [port]` but if you want a login page I guess this one will work :D. It's quick cause all you need is Django.
+This is where you just want a quick and dirty file server for hosting things in development (you may want to just use `python3 -m http.server [port]` but if you want a login page I guess this one will work :D). It's quick cause all you need is Django.
 
 So first off is to kick off your venv, we are using centos so go to the directory you want to install this in: 
 
