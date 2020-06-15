@@ -39,8 +39,9 @@ Now change the admin password:
 
 `manage.py changepassword admin`
 
-# Running - (Production Server)
+# Installing - (Production Server)
 
+`pip install uswgi`
 
 # Credits:
 Used some ideas from https://github.com/kindkaktus/django-file-server, except that one is 2 years old and uses an outdated Django version.
