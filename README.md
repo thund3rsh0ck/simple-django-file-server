@@ -94,6 +94,10 @@ Now you should be able to run uWSGI directly with the following command, given y
 
 `uwsgi --ini DMZ_uwsgi.ini`
 
+Make sure nginx is running as well
+
+`nginx`
+
 # Credits:
 
 Used some ideas from https://github.com/kindkaktus/django-file-server, except that one is 2 years old and uses an outdated Django version.
