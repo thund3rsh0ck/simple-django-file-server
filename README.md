@@ -3,7 +3,7 @@ REALLY simple fileserver to serve files via HTTPS
 
 Admins will have ability to upload files. Standard users will only be able to download.
 
-# Installing
+# Installing - (Development Server)
 So first off is to kick off your venv, we are using centos so go to the directory you want to install this in: 
 
 `yum install python3 git`
@@ -28,7 +28,7 @@ Now to clone this repo..
 
 Change the allowed hosts to your own server's ip in the DMZ/DMZ/settings.py file.
 
-# Running
+# Running - (Development Server)
 When all is good, just run the following (adapt as needed for directories depending on where your venv is, unless you're already in venv)
 
 `/django/venv/bin/python3 /projects/simple-django-file-server/manage.py runserver 0.0.0.0:443`
@@ -38,6 +38,9 @@ Now change the admin password:
 `cd django-fileserver-simple/`
 
 `manage.py changepassword admin`
+
+# Running - (Production Server)
+
 
 # Credits:
 Used some ideas from https://github.com/kindkaktus/django-file-server, except that one is 2 years old and uses an outdated Django version.
