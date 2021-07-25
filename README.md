@@ -112,7 +112,7 @@ Next we install python certbot for nginx
 `dnf install certbot python3-certbot-nginx`
 
 Make sure you can serve on port 40 and 443 on your server, then run:
-`certbox --nginx`
+`certbot --nginx`
 
 Now, certbox has made some changes to the /etc/nginx/nginx.conf file.. let's make some changes accordingly as well.
 
