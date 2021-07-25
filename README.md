@@ -141,3 +141,8 @@ Now restart nginx and uwsgi and you should be good to go:
 Used some ideas from https://github.com/kindkaktus/django-file-server, except that one is 2 years old and uses an outdated Django version.
 
 Also this guide helped a ton in troubleshooting nginx and uWSGI: https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html
+
+# Other Troubleshooting:
+If you ever need to reinstall NGINX or upgrade it. You'll need to make a copy of the old folder. Then you'll need to repeat the steps for nginx above, possibly reverting the DMZ_nginx.conf to port 80 and removing one of the default folders that are included in the nginx conf.
+
+Then you'll need to redo the certbot.
