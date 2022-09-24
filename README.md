@@ -12,17 +12,19 @@ So first off is to kick off your venv, we are using centos so go to the director
 
 `python3 -m venv venv`
 
-`source venv/bin/activate'
+`source venv/bin/activate`
 
 `pip install --upgrade pip`
 
 This is the version of Django we coded this on, but you should try to install the latest version and downgrade if necessary.
 
-`pip install Django==3.0.7`
+`pip install Django`
+`pip install Django==3.0.7` <-- BACKUP
 
 We also installed Django axes to avoid brute force of logins.
 
-`pip install django-axes==5.3.4`
+`pip install django-axes`
+`pip install django-axes==5.3.4` <-- BACKUP
 
 Now to clone this repo..
 
@@ -111,7 +113,7 @@ Next we install python certbot for nginx
 
 `dnf install certbot python3-certbot-nginx`
 
-Make sure you can serve on port 40 and 443 on your server, then run:
+Make sure you can serve on port 80 and 443 on your server, then run:
 `certbot --nginx`
 
 Now, certbox has made some changes to the /etc/nginx/nginx.conf file.. let's make some changes accordingly as well.
