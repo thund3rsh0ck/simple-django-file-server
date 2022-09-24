@@ -19,11 +19,13 @@ So first off is to kick off your venv, we are using centos so go to the director
 This is the version of Django we coded this on, but you should try to install the latest version and downgrade if necessary.
 
 `pip install Django`
+
 `pip install Django==3.0.7` <-- BACKUP
 
 We also installed Django axes to avoid brute force of logins.
 
 `pip install django-axes`
+
 `pip install django-axes==5.3.4` <-- BACKUP
 
 Now to clone this repo..
